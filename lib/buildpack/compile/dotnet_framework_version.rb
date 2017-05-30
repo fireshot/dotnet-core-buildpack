@@ -106,7 +106,7 @@ module AspNetCoreBuildpack
                               global_props['runtimeOptions'].key?('framework') &&
                               global_props['runtimeOptions']['framework'].key?('version')
 
-      return nil unless has_framework_version
+      return '1.1' unless has_framework_version
 
       version = global_props['runtimeOptions']['framework']['version']
       out.print("Detected .NET Core runtime version #{version} in #{runtime_config_json_file}")
