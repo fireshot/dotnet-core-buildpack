@@ -32,7 +32,8 @@ module AspNetCoreBuildpack
 
     def versions
       runtime_config_json_file = Dir.glob(File.join(@build_dir, '*.runtimeconfig.json')).first
-
+      out.print("-----------------Directory: #{@build_dir}")
+      out.print("-----------------file: #{runtime_config_json_file}")
       framework_versions = []
 
       if !runtime_config_json_file.nil?
