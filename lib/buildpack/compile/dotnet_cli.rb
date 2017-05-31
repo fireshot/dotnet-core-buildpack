@@ -62,7 +62,8 @@ module AspNetCoreBuildpack
 
     def publish_config
       if ENV['PUBLISH_RELEASE_CONFIG'] == 'true'
-        'Release'
+        #'Release'
+        'Debug'
       else
         'Debug'
       end
