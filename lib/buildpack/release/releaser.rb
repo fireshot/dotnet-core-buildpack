@@ -32,8 +32,8 @@ module AspNetCoreBuildpack
 
       app = AppDir.new(File.expand_path(File.join(@build_dir, app_root_dir)))
       start_cmd = get_start_cmd(app)
-
-      raise 'No project could be identified to run' if start_cmd.nil? || start_cmd.empty?
+      puts "-------------Start Command:#{start_cmd}"
+      #raise 'No project could be identified to run' if start_cmd.nil? || start_cmd.empty?
 
       write_startup_script(startup_script_path(build_dir), start_cmd)
       generate_yml(start_cmd, app_root_dir)
