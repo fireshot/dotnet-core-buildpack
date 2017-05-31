@@ -70,7 +70,7 @@ module AspNetCoreBuildpack
       step('Installing required .NET Core runtime(s)', @dotnet_framework.method(:install)) 
       #if should_install_framework?
 
-      #step('Publishing application using Dotnet CLI', @dotnet_cli.method(:publish)) 
+      step('Publishing application using Dotnet CLI', @dotnet_cli.method(:publish)) 
       #if should_publish?
       step('Saving to buildpack cache', method(:save_cache))
       step('Cleaning staging area', method(:clean_staging_area))
