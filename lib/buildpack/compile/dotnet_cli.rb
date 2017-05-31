@@ -54,6 +54,8 @@ module AspNetCoreBuildpack
       FileUtils.mkdir_p(publish_dir)
 
       cmd = "bash -c 'cd #{@build_dir}; dotnet publish #{main_project} -o #{publish_dir} -c #{publish_config}'"
+      
+      puts "#{cmd}"
 
       @shell.exec(cmd, out)
     end
